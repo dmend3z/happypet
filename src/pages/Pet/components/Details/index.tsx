@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import Button from '../../../../components/Button';
 import { Loading } from '../../../../components/Loading';
+import api from '../../../../utils/api';
 
 import Image from "../Image"
  import { Container, Info, Item, Title, Wrapper, ItemContact, NameContact } from './styles';
@@ -36,7 +37,7 @@ const Details: React.FC = () => {
 
 
       useEffect(() => {
-        fetch("http://localhost:8080/api/pets/" + params.id)
+        fetch(api + "pets/" + params.id)
       .then(response => response.json())
       .then(response => {
         setTimeout(() => {
@@ -51,7 +52,7 @@ const Details: React.FC = () => {
 
       useEffect(() => {
         if (pet) {
-        fetch("http://localhost:8080/api/users/" + pet?.userId,)
+        fetch(api+"users/" + pet?.userId,)
         .then((response) => response.json())
         .then((response) => {
          setUser(response);

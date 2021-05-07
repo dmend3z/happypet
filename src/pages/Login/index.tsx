@@ -5,6 +5,7 @@ import {  Redirect } from 'react-router-dom';
 
 import { Container, FormItem, Image, Input, Form, Button, ErrorMessage, Sugestion } from "./styles";
 import { LinkStyled } from '../../components/Link';
+import api from '../../utils/api';
 
 
 
@@ -27,7 +28,7 @@ const Login = () => {
           password: password
       };
         
-      fetch("http://localhost:8080/api/auth/login", {
+      fetch(api+ "auth/login", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json" 

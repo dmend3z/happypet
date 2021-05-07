@@ -7,6 +7,7 @@ import Category from '../../components/Category';
 import { Categories, NextPage, Pagination, LastPage, Items, ItemPet } from './styles';
 import { LinkStyled } from '../../components/Link';
 import * as icon from "react-icons/fa";
+import api from '../../utils/api';
 
 interface Pets {
   petId: string;
@@ -45,7 +46,7 @@ const Home = () => {
 }
 
   useEffect(() => {
-  fetch("http://localhost:8080/api/pets?size=6&page=" + page.currentPage)
+  fetch(api + "pets?size=6&page=" + page.currentPage)
   .then((response) => response.json())
   .then((response) => {
       setPets(response.results);

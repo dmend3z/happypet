@@ -1,8 +1,9 @@
 import decode from "jwt-decode";
+import api from "../utils/api";
 
 export const login = (username: string, password: string) => {
   // Get a token from api server using the fetch api
-  return fetch(`http://localhost:8080/api/auth/login`, {
+  return fetch(api+`auth/login`, {
     method: "POST",
     body: JSON.stringify({
       username,

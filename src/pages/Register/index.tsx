@@ -4,6 +4,7 @@ import { Container, FormItem, Image, Input, Form, Button, ErrorMessage, Sugestio
 import Header from "../../components/Header";
 import { useHistory } from "react-router-dom";
 import { LinkStyled } from "../../components/Link";
+import api from "../../utils/api";
 //import { Redirect } from 'react-router-dom';
 
 const Register: React.FC = () => {
@@ -42,7 +43,7 @@ const Register: React.FC = () => {
 
 
 
-    fetch("http://localhost:8080/api/users", {
+    fetch(api+"users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

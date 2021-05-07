@@ -10,6 +10,7 @@ import * as icon from "react-icons/fa";
 import {ItemPet, Items} from "../../pages/Home/styles"
 
 import { Container, GoBack } from './styles';
+import api from '../../utils/api';
 
 const Pets: React.FC = () => {
 
@@ -32,7 +33,7 @@ const Pets: React.FC = () => {
       
       useEffect(() => {
 
-        fetch("http://localhost:8080/api/pets/category?category=" + params.category.toUpperCase())
+        fetch(api+"pets/category?category=" + params.category.toUpperCase())
         .then((response) => response.json())
         .then((response) => {
                 setPets(response.results);

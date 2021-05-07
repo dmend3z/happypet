@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import Button from "../../components/Button";
 import { useHistory } from "react-router-dom";
 import { StyledSelect } from "../../components/Select";
+import api from "../../utils/api";
 //import { Redirect } from 'react-router-dom';
 
 const CreatePet: React.FC = () => {
@@ -54,7 +55,7 @@ const CreatePet: React.FC = () => {
 
     const user = JSON.parse(localStorage.getItem("user")!);
 
-    fetch("http://localhost:8080/api/pets", {
+    fetch(api+ "pets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

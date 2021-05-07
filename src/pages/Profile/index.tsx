@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Header from "../../components/Header";
 import { getCurrentUser, getProfile, logout } from "../../services/auth";
+import api from "../../utils/api";
 
 import { Container, Content, HeaderTitle, ProfileContent, ProfileHint, ProfileLogout, ProfilePair, ProfileText } from "./styles";
 
@@ -41,7 +42,7 @@ const Profile: React.FC = () => {
   useEffect(() => {
     if(currentUser) {
 
-   fetch("http://localhost:8080/api/users/" + id?.userId)
+   fetch(api+"users/" + id?.userId)
    .then((response) => response.json())
    .then((response) => {
         setProfile(response);
