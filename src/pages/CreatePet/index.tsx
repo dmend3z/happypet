@@ -78,7 +78,6 @@ const CreatePet: React.FC = () => {
 
   return (
     <>
-      <Header></Header>
       <Wrapper>
         <Container>
           <form onSubmit={handleSubmit}>

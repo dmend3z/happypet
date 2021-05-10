@@ -47,7 +47,6 @@ const Pets: React.FC = () => {
 
   return (
       <>
-      <Header />
     <Container>
       <GoBack>
 

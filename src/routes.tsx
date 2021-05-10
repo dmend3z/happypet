@@ -8,6 +8,7 @@ import CreatePet from './pages/CreatePet';
 import Profile from './pages/Profile';
 import Pets from './pages/Pets';
 import Register from './pages/Register';
+import Header from './components/Header';
 
 // import { Container } from './styles';
 
@@ -16,6 +17,7 @@ const App = () => {
     
       <BrowserRouter>
       <GlobalStyle />
+      <Header />
         <Switch>  
           <Route path="/" exact component={Home} />
           <Route path="/login"  component={Login} />

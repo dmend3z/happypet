@@ -71,8 +71,6 @@ const Register: React.FC = () => {
 
   return (
     <>
-    <Header />
-
     <Container>
       <Form onSubmit={handleSubmit}>
       <FormItem>

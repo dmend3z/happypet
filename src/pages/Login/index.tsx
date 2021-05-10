@@ -55,7 +55,6 @@ const Login = () => {
 
   return (
       <>
-      <Header />
 
       <Container>
         <Form onSubmit={onSubmit}>

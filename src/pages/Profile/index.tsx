@@ -60,7 +60,6 @@ const Profile: React.FC = () => {
   }
   
   return (<>
-    <Header></Header>
     <Container>
         <HeaderTitle>
             Hello, {profile?.firstName} {profile?.lastName} !

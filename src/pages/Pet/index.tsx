@@ -7,7 +7,6 @@ import Details from './components/Details';
 const Pet: React.FC = () => {
   return (
       <>
-          <Header ></Header>
           <Details />
       </>
   );

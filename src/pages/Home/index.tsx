@@ -61,7 +61,6 @@ if (!pets) {
 }
   return (
       <div>
-          <Header></Header>
           
           <Wrapper>
             <Categories>
